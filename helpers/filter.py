@@ -1,18 +1,9 @@
-import firebase_admin
-from firebase_admin import credentials, firestore
 from google.cloud.firestore_v1.base_query import FieldFilter, BaseCompositeFilter
 
-class Database():
-    CREDENTIALS = credentials.Certificate("db/serviceAccountKey.json")
-    firebase_admin.initialize_app(CREDENTIALS)
-    CLIENT = firestore.client()
-
-    # def get(self, collection_name):
-    #     self.CLIENT.collection(collection_name).get()
-
-    class Field:
+class Field:
         """
         Alllows construction of the FieldFilter object in a pseudo-functional way
+        Naming might be inelegant, but it does allow for human-readable code
         """
         def __init__(self, attribute_name: str) -> None:
             self.attribute_name = attribute_name
