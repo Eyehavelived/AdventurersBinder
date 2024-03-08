@@ -10,3 +10,8 @@ class Deity(Base):
             'aliases': aliases
         }
         return super().add()
+    
+    class _Deity():
+        def __init__(self, name, aliases: list, domains: list, url, sourcebook) -> None:
+            
+            pass

@@ -1,4 +1,4 @@
-from entities.base import Base
+from collection.base import Base
 
 class Rarity(Base):
     def __init__(self, *args, **kwargs):
